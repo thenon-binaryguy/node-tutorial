@@ -4,7 +4,11 @@ const morgan =  require("morgan");
 const app = express();
 const prroute = require("./api/routes/products");
 const orroute = require("./api/routes/orders");
+
+mongoose.connect("mongodb+srv://mymongo:@cluster0.v11x5cl.mongodb.net/?retryWrites=true&w=majority")
+
 const bodyParser = require("body-parser");
+const { default: mongoose } = require("mongoose");
 
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({extended:false}));
