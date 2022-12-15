@@ -23,6 +23,24 @@ router.get("/:id", (req,res,next) => {
 
 }); 
 
+router.patch("/:id", (req,res,next) => {
+    const pid = req.params.id ; 
+    res.status(200).json({
+        message: 'My requests',
+        id : pid 
+    });
+
+}); 
+
+router.delete("/:id", (req,res,next) => {
+    const pid = req.params.id ; 
+    res.status(200).json({
+        message: 'My requests',
+        id : pid 
+    });
+
+}); 
+
 module.exports = router ;  
 
 
